@@ -11,10 +11,11 @@ export class AppService {
    */
   public generateNumbers(): number[] {
 
-    for (let i = 0; i < numbers; i++) {
+    for (let i = 1; i <= numbers; i++) {
       const random = Math.round(Math.random() * 99);
       this.arrOfNumbers.push(random);
     }
+    console.log(this.arrOfNumbers);
     // uniq values
     const uniq = this.getUniq(this.arrOfNumbers);
     // shuffle copy arr
